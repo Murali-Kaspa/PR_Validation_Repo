@@ -1,9 +1,5 @@
 def calculate_total():
-    # TODO: Fix this calculation
-    print("Calculating total")
+    # TODO: Fix this validation issue
+    print("Calculating TOtal")
 
-    eturn 100
-
-
-if __name__ == "__main__":
-    calculate_total()
+    return 100
