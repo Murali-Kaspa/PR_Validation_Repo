@@ -29,11 +29,22 @@ def validate_file(file_path):
 
 def main():
 
-    # Example files to validate
+    # Jenkins will pass the changed files
     changed_files = [
-        Path("app/example.py"),
-        Path("app/config.py"),
+        Path(file_path)
+        for file_path in sys.argv[1:]
     ]
+
+    if not changed_files:
+        print("ℹ️ No changed files to validate")
+        sys.exit(0)
+
+    print("Files being validated:")
+
+    for file_path in changed_files:
+        print(f" - {file_path}")
+
+    print()
 
     all_errors = []
 
